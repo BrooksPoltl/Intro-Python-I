@@ -22,3 +22,16 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+today = datetime.today()
+args = len(sys.argv)
+if args is 1:
+  print(calendar.month(today.year, today.month))
+if args is 2:
+  print(calendar.month(today.year, int(sys.argv[1])))
+if args is 3: 
+  print(calendar.month( int(sys.argv[2]),int(sys.argv[1])))
+else:
+  print('please give correct arguments like cal.py 07 2018')
+
